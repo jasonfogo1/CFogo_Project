@@ -38,17 +38,20 @@ it('Verify a user can add a product to the cart from Products Gallery page.',()=
     //cy.get(CartPage.createSelector(product)).should('exist');
     //Add Assertion
 })
-it('Verify a user can add multiple products to the cart from Products Gallery page.',()=>{
+it.only('Verify a user can add multiple products to the cart from Products Gallery page.',()=>{
     let product='Quality Pink Pants'
     let prodAddBtn= ProductPage.AddToCartButtons(product);
     cy.get(prodAddBtn).scrollIntoView();
     cy.wait(1500);
     cy.get(prodAddBtn).click();
+    cy.wait(5000);
+   // cy.get(CartPage.btnContinueShopping).should('exist');
+    //cy.get(CartPage.btnContinueShopping).click();
     let product2='Quality Hooded Sweatshirt'
     let prodAddBtn2= ProductPage.AddToCartButtons(product2);
     cy.get(prodAddBtn2).scrollIntoView();
     cy.wait(1500);
-    cy.get(prodAddBtn).click();
+    cy.get(prodAddBtn2).click();
     //cy.get(CartPage.createSelector(product)).should('exist');
     //Add Assertion
 })
