@@ -26,6 +26,12 @@ class ProductPage{
     get btnSignout(){
         return('#top-sign-out');
     }
+    get productPrice(){
+        return('.chakra-text.css-0');
+    }
+    get qualityMug(){
+        return('img[src="/images/quality-mug.jpg"]');
+    }
 
      AddToCartButtons(prodname){
         prodname='[data-item-name="'+prodname+'"]'//accept 
